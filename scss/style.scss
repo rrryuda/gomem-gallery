@@ -15,6 +15,9 @@
 	/* Spacer */
 	--unit: 16px;
 
+	/* Move */
+	--ease: cubic-bezier(.22, .68, 0, 1.71);
+
 	@media screen and (max-width: 1023px) {
 		--unit: 14px;
 	}
@@ -105,4 +108,21 @@ html {
 	/* Font smoothing */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: auto;
+}
+
+/* Animation */
+.-m {
+	animation: fadeInUp .4s var(--ease);
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(calc(var(--unit) * 2));
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
