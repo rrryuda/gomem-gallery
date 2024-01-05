@@ -97,6 +97,10 @@ section {
 				grid-column: span 1;
 			}
 		}
+
+		p {
+			grid-column: 1 / -1;
+		}
 	}
 
 	picture {
