@@ -57,7 +57,7 @@ p {
 /* Layouts */
 main {
 	max-width: var(--body);
-	padding: calc(var(--unit) * 4) calc(var(--unit) * 4);
+	padding: calc(var(--unit) * 4);
 	margin: 0 auto;
 
 	@media screen and (max-width: 1023px) {
@@ -100,10 +100,8 @@ section {
 	}
 
 	picture {
-		flex-shrink: 1;
-
 		img {
-			margin-bottom: calc(var(--unit) * 1);
+			margin-bottom: calc(var(--unit) * .875);
 		}
 
 		.caption {
@@ -114,8 +112,30 @@ section {
 
 			span {
 				font-weight: 600;
-				line-height: 1.25rem;
+				line-height: 1.5em;
 				word-break: break-all;
+
+				a {
+					&:hover {
+						color: var(--color-background);
+						background: var(--color-highlight);
+						border-radius: .25rem;
+						box-shadow:
+							-.25rem 0 0 var(--color-highlight),
+							.25rem 0 0 var(--color-highlight);
+					}
+
+					&:has(svg) {
+						display: inline-flex;
+						align-items: center;
+						gap: .125rem;
+					}
+
+					svg {
+						width: calc(var(--unit) * 1.25);
+						height: calc(var(--unit) * 1.25);
+					}
+				}
 			}
 
 			.tier {
@@ -143,11 +163,6 @@ section {
 				&.-mid {
 					/* Font styling */
 					color: var(--color-foreground-deep);
-				}
-
-				&.-low {
-					/* Font styling */
-					color: var(--color-foreground-deep);
 
 					svg {
 						width: calc(var(--unit) * 1.75);
@@ -157,5 +172,25 @@ section {
 				}
 			}
 		}
+	}
+}
+
+footer {
+	font-size: 1rem;
+	font-weight: 500;
+	text-align: center;
+	max-width: var(--body);
+	padding: calc(var(--unit) * 4);
+	margin: 0 auto;
+	color: var(--color-foreground-deep);
+
+	@media screen and (max-width: 1023px) {
+		padding: calc(var(--unit) * 4) calc(var(--unit) * 2);
+
+	}
+
+	@media screen and (max-width: 767px) {
+		padding: calc(var(--unit) * 4) calc(var(--unit) * 1);
+
 	}
 }

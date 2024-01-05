@@ -6,6 +6,7 @@
 	--color-foreground: rgba(255, 255, 255, 1);
 	--color-foreground-deep: rgba(255, 255, 255, .5);
 	--color-background: rgba(24, 24, 24, 1);
+	--color-background-deep: rgba(24, 24, 24, .5);
 	--color-highlight: rgba(19, 210, 213, 1);
 
 	/* Width */
@@ -86,14 +87,12 @@ li {
 
 /* Html */
 html {
-	overflow: hidden;
 	font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	word-break: keep-all;
 	font-display: fallback;
 	-webkit-font-display: fallback;
-	height: 100%;
 	color: var(--color-foreground);
 	background: var(--color-background);
 
@@ -106,9 +105,4 @@ html {
 	/* Font smoothing */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: auto;
-}
-
-body {
-	overflow: auto;
-	height: 100%;
 }
