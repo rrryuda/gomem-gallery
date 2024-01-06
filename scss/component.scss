@@ -15,7 +15,7 @@ p {
 	/* Font styling */
 	font-size: calc(var(--unit) * 1);
 	font-weight: 500;
-	line-height: 1.625em;
+	line-height: 1.25em;
 }
 
 /* Layouts */
@@ -30,7 +30,7 @@ main {
 	}
 
 	@media screen and (max-width: 544px) {
-		padding: calc(var(--unit) * 1);
+		padding: calc(var(--unit) * 2) calc(var(--unit) * 1);
 
 	}
 
@@ -74,6 +74,9 @@ main {
 
 			p {
 				&:first-child {
+					margin-bottom: calc(var(--unit) * .5);
+
+					/* Font styling */
 					font-size: calc(var(--unit) * 1.25);
 				}
 
@@ -105,15 +108,11 @@ main {
 		}
 
 		picture {
-			padding: calc(var(--unit) * 1);
-			background: var(--color-foreground);
+			overflow: hidden;
 			opacity: 0;
 
-			@media screen and (max-width: 767px) {
-				padding: calc(var(--unit) * .75) calc(var(--unit) * .75) calc(var(--unit) * 1);
-			}
-
-			img {
+			img,
+			p {
 				margin-bottom: calc(var(--unit) * 1);
 
 				@media screen and (max-width: 767px) {
@@ -121,25 +120,18 @@ main {
 				}
 			}
 
-			.caption {
-				display: flex;
-				align-items: center;
-				gap: calc(var(--unit) * .375);
+			p {
+				/* Font styling */
+				font-family: 'Caveat', cursive;
+				font-size: calc(var(--unit) * 1.25);
+				font-weight: 700;
+				line-height: 1.375em;
+				text-align: center;
+				white-space: nowrap;
 
-				p {
-					color: var(--color-background);
-
-					/* Font styling */
-					font-family: 'Caveat', cursive;
-					font-size: calc(var(--unit) * 1.25);
-					font-weight: 700;
-					line-height: 1.375em;
-					word-break: break-all;
-
-					a {
-						&:hover {
-							text-decoration: underline;
-						}
+				a {
+					&:hover {
+						text-decoration: underline;
 					}
 				}
 			}
