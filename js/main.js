@@ -6,7 +6,7 @@ window.onload = function () {
         setTimeout(function () {
             picture.style.opacity = 1;
             picture.classList.add("-m");
-        }, (index + 2) * 150);
+        }, (index + 2) * 100);
     });
 };
 

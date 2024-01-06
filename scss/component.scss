@@ -133,21 +133,22 @@ section {
 	picture {
 		opacity: 0;
 
-		img {
-			margin-bottom: calc(var(--unit) * .875);
+		img,
+		.captrion {
+			margin-bottom: calc(var(--unit) * .75);
 		}
 
 		.caption {
 			display: flex;
 			align-items: center;
-			gap: calc(var(--unit) * .5);
-			margin-bottom: calc(var(--unit) * .75);
+			gap: calc(var(--unit) * .375);
 
 			span {
 				/* Font styling */
 				font-weight: 500;
 				font-weight: 600;
 				line-height: 1.5em;
+				letter-spacing: -.025em;
 				word-break: break-all;
 
 				a {
