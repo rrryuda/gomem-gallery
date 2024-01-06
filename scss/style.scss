@@ -10,7 +10,7 @@
 	--color-highlight: rgba(19, 210, 213, 1);
 
 	/* Width */
-	--body: 1312px;
+	--body: 100%;
 
 	/* Spacer */
 	--unit: 16px;
@@ -18,12 +18,8 @@
 	/* Move */
 	--ease: cubic-bezier(.22, .68, 0, 1.71);
 
-	@media screen and (max-width: 1023px) {
+	@media screen and (max-width: 1439px) {
 		--unit: 14px;
-	}
-
-	@media screen and (max-width: 767px) {
-		--unit: 12px;
 	}
 }
 
@@ -90,7 +86,7 @@ li {
 
 /* Html */
 html {
-	font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+	font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	word-break: keep-all;

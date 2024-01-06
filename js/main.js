@@ -6,7 +6,7 @@ window.onload = function () {
         setTimeout(function () {
             picture.style.opacity = 1;
             picture.classList.add("-m");
-        }, (index + 2) * 100);
+        }, (index + 3) * 75);
     });
 };
 
@@ -16,12 +16,12 @@ function showPopup(event) {
     popup.style.display = "block";
     updatePopupPosition(event);
     window.addEventListener("mousemove", updatePopupPosition);
+    window.addEventListener("scroll", hidePopup);
 }
 
 function hidePopup() {
     var popup = document.getElementById("bio");
     popup.style.display = "none";
-    window.removeEventListener("mousemove", updatePopupPosition);
 }
 
 function updatePopupPosition(event) {
@@ -31,3 +31,7 @@ function updatePopupPosition(event) {
     popup.style.left = x + "px";
     popup.style.top = y + "px";
 }
+
+window.addEventListener("load", function () {
+    hidePopup();
+});
