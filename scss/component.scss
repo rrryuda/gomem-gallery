@@ -122,7 +122,52 @@ main {
 
 		picture {
 			overflow: hidden;
+
+			/* Animation */
 			opacity: 0;
+
+			&:hover {
+				.tier {
+					/* Animation */
+					opacity: 1;
+					transform: translateY(calc(var(--unit) * -.5));
+					transition: all .4s var(--ease);
+				}
+			}
+
+			.tier {
+				position: absolute;
+				z-index: 1;
+				display: flex;
+				align-self: center;
+				justify-content: center;
+				top: calc(var(--unit) * -.5);
+				right: calc(var(--unit) * 1);
+				width: 2.5rem;
+				padding: calc(var(--unit) * 1.5) 0 calc(var(--unit) * 1.25);
+				background: var(--color-background);
+				clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+
+				/* Animation */
+				opacity: 0;
+				transform: translateY(calc(var(--unit) * -2));
+				transition: all .4s var(--ease);
+
+				/* Font styling */
+				font-size: calc(var(--unit) * 1.25);
+				font-weight: 700;
+				line-height: 1em;
+				text-align: center;
+				white-space: nowrap;
+
+				&.-god {
+					color: var(--color-highlight);
+				}
+
+				&.-top {
+					color: var(--color-highlight);
+				}
+			}
 
 			img,
 			p {
