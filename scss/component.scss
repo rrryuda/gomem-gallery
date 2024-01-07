@@ -78,13 +78,26 @@ main {
 
 					/* Font styling */
 					font-size: calc(var(--unit) * 1.25);
+
+					a {
+						color: var(--color-highlight);
+
+						&:hover {
+							color: var(--color-background);
+							background: var(--color-highlight);
+							border-radius: calc(var(--unit) * .25);
+							box-shadow: calc(var(--unit) * -.25) 0 0 var(--color-highlight),
+								calc(var(--unit) * .25) 0 0 var(--color-highlight);
+						}
+					}
 				}
 
 				&.copr {
 					color: var(--color-foreground-deep);
 
 					a {
-						color: var(--color-highlight);
+						/* Font styling */
+						text-decoration: underline;
 					}
 				}
 
