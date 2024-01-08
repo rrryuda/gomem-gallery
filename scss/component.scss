@@ -120,10 +120,11 @@ main {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				right: calc(var(--unit) * 1);
+				right: 0;
 				bottom: 0;
 				width: calc(var(--unit) * 2.5);
 				height: calc(var(--unit) * 4);
+				padding-top: calc(var(--unit) * .5);
 				clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%);
 
 				/* Font styling */
