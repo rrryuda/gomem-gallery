@@ -1,16 +1,4 @@
 /* Typography */
-h1 {
-	/* Font styling */
-	font-weight: 600;
-	line-height: 1.125em;
-	letter-spacing: -.075rem;
-
-	@media screen and (max-width: 767px) {
-		letter-spacing: -.0375rem;
-
-	}
-}
-
 p {
 	/* Font styling */
 	font-size: calc(var(--unit) * 1);
@@ -57,24 +45,16 @@ main {
 
 		.intro {
 			grid-column: 1/-1;
+			margin-bottom: calc(var(--unit) * 3);
 
-			h1 {
-				margin: calc(var(--unit) * 5) 0;
+			@media screen and (max-width: 1023px) {
+				margin-bottom: calc(var(--unit) * 1.25);
 
-				/* Font styling */
-				font-size: calc(var(--unit) * 5);
-
-				@media screen and (max-width: 767px) {
-					margin: calc(var(--unit) * 3) 0;
-
-					/* Font styling */
-					font-size: calc(var(--unit) * 3);
-				}
 			}
 
 			p {
 				&:first-child {
-					margin-bottom: calc(var(--unit) * .5);
+					margin-bottom: calc(var(--unit) * .375);
 
 					/* Font styling */
 					font-size: calc(var(--unit) * 1.25);
