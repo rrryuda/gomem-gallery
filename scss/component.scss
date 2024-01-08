@@ -124,9 +124,7 @@ main {
 				bottom: 0;
 				width: calc(var(--unit) * 2.5);
 				height: calc(var(--unit) * 4);
-				padding-top: calc(var(--unit) * .5);
-				border-radius: calc(var(--unit) * .25);
-				clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+				clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%);
 
 				/* Font styling */
 				font-size: calc(var(--unit) * 1.25);
