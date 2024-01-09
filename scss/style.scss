@@ -117,7 +117,7 @@ body {
 
 /* Animation */
 .-m {
-	animation: fadeInUp .4s var(--ease);
+	animation: fadeInUp .4s ease;
 }
 
 @keyframes fadeInUp {
