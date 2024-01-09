@@ -3,14 +3,28 @@ window.onload = function () {
     var mainElement = document.querySelector("main");
     var pictureElements = mainElement.querySelectorAll("picture");
 
-    pictureElements.forEach(function (picture, index) {
-        setTimeout(function () {
-            picture.style.opacity = 1;
-            picture.classList.add("-m");
-        }, (index + 3) * 75);
+    var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry, index) {
+            if (entry.isIntersecting) {
+                setTimeout(function () {
+                    animatePicture(entry.target);
+                }, (index + 1) * 75);
+
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.25 });
+
+    pictureElements.forEach(function (picture) {
+        observer.observe(picture);
     });
 
     mainElement.style.visibility = 'visible';
+
+    function animatePicture(picture) {
+        picture.style.opacity = 1;
+        picture.classList.add("-m");
+    }
 };
 
 /* Bio */
