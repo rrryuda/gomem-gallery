@@ -1,4 +1,5 @@
 /* Typography */
+h5,
 p {
 	/* Font styling */
 	font-size: calc(var(--unit) * 1);
@@ -52,26 +53,26 @@ main {
 
 			}
 
-			p {
-				&:first-child {
-					margin-bottom: calc(var(--unit) * .375);
+			h5 {
+				margin-bottom: calc(var(--unit) * .375);
 
-					/* Font styling */
-					font-size: calc(var(--unit) * 1.25);
+				/* Font styling */
+				font-size: calc(var(--unit) * 1.25);
 
-					a {
-						color: var(--color-highlight);
+				a {
+					color: var(--color-highlight);
 
-						&:hover {
-							color: var(--color-background);
-							background: var(--color-highlight);
-							border-radius: calc(var(--unit) * .25);
-							box-shadow: calc(var(--unit) * -.25) 0 0 var(--color-highlight),
-								calc(var(--unit) * .25) 0 0 var(--color-highlight);
-						}
+					&:hover {
+						color: var(--color-background);
+						background: var(--color-highlight);
+						border-radius: calc(var(--unit) * .25);
+						box-shadow: calc(var(--unit) * -.25) 0 0 var(--color-highlight),
+							calc(var(--unit) * .25) 0 0 var(--color-highlight);
 					}
 				}
+			}
 
+			p {
 				&.copr {
 					color: var(--color-foreground-deep);
 
