@@ -6,14 +6,18 @@ window.onload = function () {
     var observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(function (entry, index) {
             if (entry.isIntersecting) {
-                setTimeout(function () {
+                if (window.innerWidth > 767) {
+                    setTimeout(function () {
+                        animatePicture(entry.target);
+                    }, index * 75);
+                } else {
                     animatePicture(entry.target);
-                }, (index + 1) * 75);
+                }
 
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.25 });
+    }, { threshold: 0.5, passive: true });
 
     pictureElements.forEach(function (picture) {
         observer.observe(picture);
@@ -25,6 +29,12 @@ window.onload = function () {
         picture.style.opacity = 1;
         picture.classList.add("-m");
     }
+
+    window.addEventListener("scroll", function () {
+        pictureElements.forEach(function (picture) {
+            observer.observe(picture);
+        });
+    });
 };
 
 /* Bio */
