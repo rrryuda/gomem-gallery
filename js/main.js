@@ -1,6 +1,7 @@
 /* Animation */
 window.onload = function () {
-    var pictureElements = document.querySelectorAll("main picture");
+    var mainElement = document.querySelector("main");
+    var pictureElements = mainElement.querySelectorAll("picture");
 
     pictureElements.forEach(function (picture, index) {
         setTimeout(function () {
@@ -8,6 +9,8 @@ window.onload = function () {
             picture.classList.add("-m");
         }, (index + 3) * 75);
     });
+
+    mainElement.style.visibility = 'visible';
 };
 
 /* Bio */
@@ -34,4 +37,8 @@ function updatePopupPosition(event) {
 
 window.addEventListener("load", function () {
     hidePopup();
+});
+
+window.addEventListener('beforeunload', function () {
+    window.scrollTo(0, 0);
 });

@@ -86,14 +86,18 @@ li {
 
 /* Html */
 html {
+	width: 100%;
+	height: auto;
+	color: var(--color-foreground);
+	background: var(--color-background);
+
+	/* Font styling */
 	font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	word-break: keep-all;
 	font-display: fallback;
 	-webkit-font-display: fallback;
-	color: var(--color-foreground);
-	background: var(--color-background);
 
 	/* Text size */
 	-webkit-text-size-adjust: none;
@@ -104,6 +108,11 @@ html {
 	/* Font smoothing */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: auto;
+}
+
+body {
+	width: 100%;
+	height: auto;
 }
 
 /* Animation */
