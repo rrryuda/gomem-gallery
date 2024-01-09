@@ -112,7 +112,9 @@ main {
 					/* Animation */
 					opacity: 1;
 					transform: translateY(calc(var(--unit) * -.5));
-					transition: all .4s var(--ease);
+					transition: all .2s ease;
+					-webkit-transform: translateY(calc(var(--unit) * -.5));
+					-webkit-transition: all .2s ease;
 				}
 			}
 
@@ -138,7 +140,9 @@ main {
 				/* Animation */
 				opacity: 0;
 				transform: translateY(calc(var(--unit) * -2));
-				transition: all .4s var(--ease);
+				transition: all .2s ease;
+				-webkit-transform: translateY(calc(var(--unit) * -2));
+				-webkit-transition: all .2s ease;
 
 				&.-stf {
 					color: var(--color-background);

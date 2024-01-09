@@ -15,9 +15,6 @@
 	/* Spacer */
 	--unit: 16px;
 
-	/* Move */
-	--ease: cubic-bezier(.22, .68, 0, 1.71);
-
 	@media screen and (max-width: 1439px) {
 		--unit: 14px;
 	}
@@ -118,6 +115,7 @@ body {
 /* Animation */
 .-m {
 	animation: fadeInUp .4s ease;
+	-webkit-animation: fadeInUp .4s ease;
 }
 
 @keyframes fadeInUp {
