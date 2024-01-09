@@ -37,6 +37,7 @@ function updatePopupPosition(event) {
 
 window.addEventListener("load", function () {
     hidePopup();
+    window.scrollTo(0, 0);
 });
 
 window.addEventListener('beforeunload', function () {
