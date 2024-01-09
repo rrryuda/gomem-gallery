@@ -17,7 +17,7 @@ window.onload = function () {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5, passive: true });
+    }, { threshold: 0.3, passive: true });
 
     pictureElements.forEach(function (picture) {
         observer.observe(picture);
