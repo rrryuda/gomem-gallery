@@ -9,7 +9,7 @@ window.onload = function () {
                 if (window.innerWidth > 767) {
                     setTimeout(function () {
                         animatePicture(entry.target);
-                    }, index * 75);
+                    }, (index + 2) * 75);
                 } else {
                     animatePicture(entry.target);
                 }
@@ -17,7 +17,7 @@ window.onload = function () {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.3, passive: true });
+    }, { threshold: 0.5, passive: true });
 
     pictureElements.forEach(function (picture) {
         observer.observe(picture);
