@@ -103,31 +103,18 @@ main {
 
 		picture {
 			overflow: hidden;
-
-			/* Animation */
 			opacity: 0;
-
-			&:hover {
-				.tier {
-					/* Animation */
-					opacity: 1;
-					transform: translateY(calc(var(--unit) * -.5));
-					transition: all .2s ease;
-					-webkit-transform: translateY(calc(var(--unit) * -.5));
-					-webkit-transition: all .2s ease;
-				}
-			}
 
 			.tier {
 				position: absolute;
+				z-index: 999;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				right: 0;
-				bottom: 0;
+				top: 0;
+				right: calc(var(--unit) * 1);
 				width: calc(var(--unit) * 2.5);
-				height: calc(var(--unit) * 4);
-				padding-top: calc(var(--unit) * .5);
+				height: calc(var(--unit) * 3.5);
 				clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%);
 
 				/* Font styling */
@@ -137,45 +124,36 @@ main {
 				text-align: center;
 				white-space: nowrap;
 
-				/* Animation */
-				opacity: 0;
-				transform: translateY(calc(var(--unit) * -2));
-				transition: all .2s ease;
-				-webkit-transform: translateY(calc(var(--unit) * -2));
-				-webkit-transition: all .2s ease;
-
 				&.-stf {
 					color: var(--color-background);
 					background: var(--color-highlight);
 				}
 
-				&.-caf {
-					background: rgba(48, 184, 102, 1);
+				&.-ise {
+					background: rgba(232, 80, 224, 1);
+
+					svg {
+						fill: var(--color-foreground)
+					}
 				}
 
 				&.-top {
-					color: rgba(164, 72, 24, 1);
-					background: rgba(255, 196, 48, 1);
-				}
-
-				&.-mid {
-					color: rgba(64, 80, 112, 1);
-					background: rgb(160, 172, 190);
-				}
-
-				&.-bot {
-					color: var(--color-foreground-deep);
-					background: rgba(140, 124, 104, 1);
+					color: rgba(132, 52, 8, 1);
+					background: rgba(255, 192, 35, 1);
 				}
 
 				&.-und {
-					background: rgba(140, 124, 104, 1);
+					background: rgba(64, 64, 64, 1);
+					clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
 
 					svg {
-						width: calc(var(--unit) * 1.5);
-						height: calc(var(--unit) * 1.5);
 						fill: var(--color-foreground-deep)
 					}
+				}
+
+				svg {
+					width: calc(var(--unit) * 1.5);
+					height: calc(var(--unit) * 1.5);
 				}
 			}
 
