@@ -93,7 +93,7 @@ main {
 
 					/* Font styling */
 					font-family: 'Noto Sans KR', sans-serif;
-					font-size: calc(var(--unit) * 1.25);
+					font-size: calc(var(--unit) * 1);
 					font-weight: 700;
 					line-height: 1.5em;
 					white-space: nowrap;
@@ -105,6 +105,17 @@ main {
 			overflow: hidden;
 			opacity: 0;
 
+			/*
+			&:hover {
+				.tier {
+					opacity: 1;
+					top: 0;
+
+					/* Animation
+					transition: all .24s ease;
+				}
+			} */
+
 			.tier {
 				position: absolute;
 				z-index: 999;
@@ -112,42 +123,36 @@ main {
 				align-items: center;
 				justify-content: center;
 				top: 0;
-				right: calc(var(--unit) * 1);
-				width: calc(var(--unit) * 2.5);
-				height: calc(var(--unit) * 3.5);
+				right: calc(var(--unit) * .75);
+				width: calc(var(--unit) * 2.25);
+				height: calc(var(--unit) * 3.25);
 				clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%);
+				opacity: 1;
 
 				/* Font styling */
-				font-size: calc(var(--unit) * 1.25);
+				font-size: calc(var(--unit) * 1.125);
 				font-weight: 700;
 				line-height: 1em;
 				text-align: center;
 				white-space: nowrap;
 
 				&.-stf {
-					color: var(--color-background);
-					background: var(--color-highlight);
+					background: rgb(64, 240, 246);
 				}
 
 				&.-ise {
-					background: rgba(232, 80, 224, 1);
-
-					svg {
-						fill: var(--color-foreground)
-					}
+					background: rgba(255, 124, 248, 1);
 				}
 
 				&.-top {
-					color: rgba(132, 52, 8, 1);
-					background: rgba(255, 192, 35, 1);
+					background: rgba(172, 148, 92, 1);
 				}
 
 				&.-und {
 					background: rgba(64, 64, 64, 1);
-					clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
 
 					svg {
-						fill: var(--color-foreground-deep)
+						opacity: .64;
 					}
 				}
 
