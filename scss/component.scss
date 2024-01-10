@@ -105,16 +105,15 @@ main {
 			overflow: hidden;
 			opacity: 0;
 
-			/*
 			&:hover {
 				.tier {
+					top: -1px;
 					opacity: 1;
-					top: 0;
 
-					/* Animation
+					/* Animation */
 					transition: all .24s ease;
 				}
-			} */
+			}
 
 			.tier {
 				position: absolute;
@@ -122,12 +121,12 @@ main {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				top: 0;
+				top: calc(var(--unit) * -2);
 				right: calc(var(--unit) * .75);
 				width: calc(var(--unit) * 2.25);
 				height: calc(var(--unit) * 3.25);
 				clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%);
-				opacity: 1;
+				opacity: 0;
 
 				/* Font styling */
 				font-size: calc(var(--unit) * 1.125);
@@ -137,7 +136,7 @@ main {
 				white-space: nowrap;
 
 				&.-stf {
-					background: rgb(64, 240, 246);
+					background: var(--color-highlight);
 				}
 
 				&.-ise {
@@ -148,8 +147,17 @@ main {
 					background: rgba(172, 148, 92, 1);
 				}
 
+				&.-mid {
+					background: rgba(124, 132, 140, 1);
+				}
+
+				&.-bot {
+					color: var(--color-foreground-deep);
+					background: rgba(96, 56, 18, 1);
+				}
+
 				&.-und {
-					background: rgba(64, 64, 64, 1);
+					background: rgba(80, 80, 80, 1);
 
 					svg {
 						opacity: .64;
