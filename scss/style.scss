@@ -4,9 +4,9 @@
 	--color-white: rgba(255, 255, 255, 1);
 	--color-black: rgba(16, 16, 16, 1);
 	--color-foreground: rgba(255, 255, 255, 1);
-	--color-foreground-deep: rgba(255, 255, 255, .64);
+	--color-foreground-deep: rgba(255, 255, 255, .56);
 	--color-background: rgba(24, 24, 24, 1);
-	--color-background-deep: rgba(24, 24, 24, .64);
+	--color-background-deep: rgba(24, 24, 24, .56);
 	--color-highlight: rgba(19, 210, 213, 1);
 
 	/* Width */
@@ -89,7 +89,7 @@ html {
 	background: var(--color-background);
 
 	/* Font styling */
-	font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+	font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	word-break: keep-all;
@@ -101,10 +101,6 @@ html {
 	-moz-text-size-adjust: none;
 	-ms-text-size-adjust: none;
 	-o-text-size-adjust: none;
-
-	/* Font smoothing */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: auto;
 }
 
 body {
