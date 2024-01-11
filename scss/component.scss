@@ -180,13 +180,15 @@ main {
 			}
 
 			p {
+				padding-left: calc(var(--unit) * .5);
+				color: var(--color-foreground-deep);
+
 				/* Font styling */
-				font-family: 'Caveat', cursive;
-				font-size: calc(var(--unit) * 1.25);
-				font-weight: 700;
-				line-height: 1.375em;
-				text-align: center;
 				white-space: nowrap;
+
+				@media screen and (max-width: 767px) {
+					padding-left: calc(var(--unit) * .25);
+				}
 
 				a {
 					&:hover {
